@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] float damage;
+    public GameObject loseMenu;
 
     private Rigidbody2D rb;
     // Start is called before the first frame update
@@ -19,9 +20,9 @@ public class Bullet : MonoBehaviour
     {
         rb.velocity = transform.right * speed;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Enemy")
+        if(collision.gameObject.tag == "Enemy")
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);

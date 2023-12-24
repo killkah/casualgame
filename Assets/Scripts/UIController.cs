@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
+    public GameObject settingsMenu;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -19,5 +19,13 @@ public class UIController : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene("Game");
+    }
+    public void ExitinMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void SettingsButton()
+    {
+        settingsMenu.SetActive(true);
     }
 }
