@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Bullet : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] float damage;
-    public GameObject loseMenu;
 
     private Rigidbody2D rb;
     // Start is called before the first frame update

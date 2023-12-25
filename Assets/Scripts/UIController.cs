@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
     public GameObject settingsMenu;
+    public GameObject inventoryMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,5 +29,17 @@ public class UIController : MonoBehaviour
     public void SettingsButton()
     {
         settingsMenu.SetActive(true);
+    }
+    public void CloseSettingsButton()
+    {
+        settingsMenu.SetActive(false);
+    }
+    public void InventoryButton()
+    {
+        inventoryMenu.SetActive(true);
+    }
+    public void CloseInventoryButton()
+    {
+        inventoryMenu.SetActive(false);
     }
 }

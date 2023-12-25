@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class AudioController : MonoBehaviour
 {
     public AudioSource musicMenu;
-    public Slider sliderMusic;
+    public AudioSource soundButton;
+    public AudioSource soundShoot;
+    public Slider sliderVolume;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,12 @@ public class AudioController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        musicMenu.volume = sliderMusic.value;
+        musicMenu.volume = sliderVolume.value;
+        soundButton.volume = sliderVolume.value;
+        
+    }
+    public void SoundButton()
+    {
+        soundButton.Play();
     }
 }
